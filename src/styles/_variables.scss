@@ -1,0 +1,24 @@
+// Primary
+$Primary: #01579b;
+$PLight: #4f83cc;
+$PDark: #002f6c;
+// seconday
+$Secondary: #757575;
+$SLight: #a4a4a4;
+$SDark: #494949;
+
+// Texts
+$PText: #FFF;
+$SText: #FFF;
+$DarkText: #000;
+
+// backgrounds
+$Background: #E1E2E1;
+$LightBackground: #ececec;
+
+// Em Font size
+$em-base: 16px !default;
+// Working in ems is annoying. Think in pixels by using this handy function, emCalc(#px) Borrowed from Zurb's Foundation 4
+@function emCalc($pxWidth) {
+  @return math.div($pxWidth, $em-base) * 1em;
+}
