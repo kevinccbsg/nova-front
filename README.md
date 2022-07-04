@@ -57,9 +57,15 @@ npm run test:dev
 
 In case you don't know how to use cypress you can execute in your local machine with these commands, and env variables.
 
+```
+npm run dev
+```
+
 .env
 ```
 API_URL=http://localhost:4000
 ```
 
-You can use the [Backend service](https://github.com/kevinccbsg/nova-api). If you download the backend service we recommend to run the API in a new port (4000). Or you can point to the [development environment](https://nova-challenge-api.herokuapp.com/api-docs). However, we do not recommend those options, and we encourague you to use cypress.
+You can use the [Backend service](https://github.com/kevinccbsg/nova-api). If you download the backend service we recommend to run the API in a new port (4000). 
+
+You could also point to the [development environment](https://nova-challenge-api.herokuapp.com/api-docs). However, we do not recommend those options, and we encourague you to use cypress.
