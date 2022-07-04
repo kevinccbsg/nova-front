@@ -11,7 +11,8 @@
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/typescript",
-    "plugin:react/jsx-runtime"
+    "plugin:react/jsx-runtime",
+    "plugin:cypress/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -22,7 +23,8 @@
     "sourceType": "module"
   },
   "env": {
-    "mocha": true
+    "mocha": true,
+    "cypress/globals": true
   },
   "plugins": ["react", "@typescript-eslint", "import", "jsx-a11y", "react-hooks"],
   "rules": {
@@ -38,6 +40,12 @@
         "ts": "never",
         "tsx": "never"
       }
-   ]
+   ],
+   "cypress/no-assigning-return-values": "error",
+   "cypress/no-unnecessary-waiting": "error",
+   "cypress/assertion-before-screenshot": "warn",
+   "cypress/no-force": "warn",
+   "cypress/no-async-tests": "error",
+   "cypress/no-pause": "error"
   }
 }

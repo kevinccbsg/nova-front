@@ -1,0 +1,25 @@
+@use 'sass:math';
+@import '../../../styles/variables';
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  label {
+    margin-bottom: 10px;
+    font-size: emCalc(20px);
+  }
+  input, textarea {
+    border-radius: 5px;
+    padding: 10px 5px;
+    border: 1px solid $Border;
+    box-shadow: none;
+    margin-bottom: 5px;
+  }
+  textarea {
+    font-size: emCalc(20px);
+  }
+  .error {
+    color: $Error;
+  }
+}

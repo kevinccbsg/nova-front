@@ -1,9 +1,7 @@
-import {
-  Formik, Form, Field, ErrorMessage,
-} from 'formik';
+import { Formik } from 'formik';
 import Main from '../../layouts/Main';
-import Button from '../../components/Button';
 import { nominateValidation } from '../../validators';
+import Form from './Form';
 import style from './Nominate.module.scss';
 import * as api from '../../repository/api';
 
@@ -34,33 +32,7 @@ const Nominate = () => (
         }}
       >
         {({ isSubmitting }) => (
-          <Form>
-            <div className={style.inputContainer}>
-              <label htmlFor="email">email</label>
-              <Field type="email" name="email" id="email" />
-              <ErrorMessage className={style.error} name="email" component="div" />
-            </div>
-            <div className={style.inputContainer}>
-              <label htmlFor="description">description</label>
-              <Field as="textarea" name="description" id="description" cols={30} rows={10} />
-              <ErrorMessage className={style.error} name="description" component="div" />
-            </div>
-            <div className={style.inputContainer}>
-              <label htmlFor="involvement">involvement</label>
-              <Field type="range" name="involvement" id="involvement" step={1} min={0} max={10} />
-              <ErrorMessage className={style.error} name="involvement" component="div" />
-            </div>
-            <div className={style.inputContainer}>
-              <label htmlFor="talent">talent</label>
-              <Field type="range" name="talent" id="talent" step={1} min={0} max={10} />
-              <ErrorMessage className={style.error} name="talent" component="div" />
-            </div>
-            <div>
-              <Button type="submit" theme="primary" disabled={isSubmitting}>
-                Nominate
-              </Button>
-            </div>
-          </Form>
+          <Form isSubmitting={isSubmitting} />
         )}
       </Formik>
     </section>

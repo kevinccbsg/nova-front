@@ -35,3 +35,24 @@
 //     }
 //   }
 // }
+
+// This code is used to solve an issue with range inputs
+// https://github.com/cypress-io/cypress/issues/1570
+Cypress.Commands.add('controlledInputChange', (input: string, value: number) => {
+  if (Object && Object.getOwnPropertyDescriptor && window) {
+    const nativeInputValueSetter = (Object.getOwnPropertyDescriptor(
+      window.HTMLInputElement.prototype,
+      'value'
+    ) || {}).set;
+    
+    const changeInputValue = inputToChange => (newValue: number) => {
+      if (nativeInputValueSetter) {
+        nativeInputValueSetter.call(inputToChange[0], newValue);
+        // @ts-ignore - we have to ignore this as it is an external code to fix the issue with range inputs
+        inputToChange[0].dispatchEvent(new Event('change', { value: newValue, bubbles: true }));
+      }
+    };
+  
+    cy.get(input).then(input => changeInputValue(input)(value));
+  }
+})
