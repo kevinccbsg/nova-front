@@ -1,15 +1,18 @@
-import {
+import {  
   BrowserRouter as Router,
   Routes,
   Route,
 } from 'react-router-dom';
 import { ROUTES } from './constants';
+import Nominate from './pages/Nominate';
+import Nominations from './pages/Nominations';
+
 
 const AppRoutes = () => (
   <Router>
     <Routes>
-      <Route path={ROUTES.NOMINATIONS} element={<h1>Nominations</h1>} />
-      <Route path={ROUTES.HOME} element={<h1>Home</h1>} />
+      <Route path={ROUTES.NOMINATIONS} element={<Nominations />} />
+      <Route path={ROUTES.HOME} element={<Nominate />} />
     </Routes>
   </Router>
 );
