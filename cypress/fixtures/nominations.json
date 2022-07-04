@@ -1,0 +1,27 @@
+{
+  "response": "API response",
+  "data": [
+    {
+      "id": "170d82cb-87fd-4579-bf57-718b74e5d80c",
+      "email": "non-valid@nova.com",
+      "description": "This is a great candidate, but it is not enough for nova",
+      "referrer": "2171b1bc-aa64-474a-8ce2-02020d5b7dc5",
+      "dateReferrer": "2022-07-04T14:04:51.551Z",
+      "status": "REJECTED",
+      "score": {
+        "involvement": 2, "talent": 3
+      }
+    },
+    {
+      "id": "170d82cb-87fd-4579-bf57-718b74e5d80c",
+      "email": "test@nova.com",
+      "description": "This is a great candidate",
+      "referrer": "2171b1bc-aa64-474a-8ce2-02020d5b7dc5",
+      "dateReferrer": "2022-06-04T14:04:51.551Z",
+      "status": "ACCEPTED",
+      "score": {
+        "involvement": 8, "talent": 10
+      }
+    }
+  ]
+}

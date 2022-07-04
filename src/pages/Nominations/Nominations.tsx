@@ -7,7 +7,7 @@ const Nominations = () => {
   const data = [
     {
       email: 'test@gmail.com',
-      status: 'PENDING',
+      status: 'REJECTED',
       description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis expedita laudantium dolor velit explicabo consequatur optio nemo. Ducimus blanditiis quos ipsum! Dolor vero quidem aspernatur dicta, ea earum ipsum deleniti.',
       date: '20-12-2022',
       involvement: 3,

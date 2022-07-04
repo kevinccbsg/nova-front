@@ -9,7 +9,7 @@ interface Nomination {
   description: string
   referrer: string
   dateReferrer: string
-  status: 'PENDING' | 'ACCEPTED'
+  status: 'REJECTED' | 'ACCEPTED'
   score: Score
 }
 

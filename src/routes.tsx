@@ -10,8 +10,8 @@ import Nominations from './pages/Nominations';
 const AppRoutes = () => (
   <Router>
     <Routes>
+      <Route path={ROUTES.NOMINATE} element={<Nominate />} />
       <Route path={ROUTES.NOMINATIONS} element={<Nominations />} />
-      <Route path={ROUTES.HOME} element={<Nominate />} />
     </Routes>
   </Router>
 );
