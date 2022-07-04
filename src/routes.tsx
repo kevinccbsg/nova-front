@@ -1,4 +1,4 @@
-import {  
+import {
   BrowserRouter as Router,
   Routes,
   Route,
@@ -6,7 +6,6 @@ import {
 import { ROUTES } from './constants';
 import Nominate from './pages/Nominate';
 import Nominations from './pages/Nominations';
-
 
 const AppRoutes = () => (
   <Router>

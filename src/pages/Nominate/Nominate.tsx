@@ -1,4 +1,6 @@
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import {
+  Formik, Form, Field, ErrorMessage,
+} from 'formik';
 
 const Nominate = () => (
   <section>
@@ -29,7 +31,7 @@ const Nominate = () => (
         </div>
         <div>
           <label htmlFor="talent">talent</label>
-          <Field type="range" name="talent" id="talent" step={1} min={0} max={10}  />
+          <Field type="range" name="talent" id="talent" step={1} min={0} max={10} />
           <ErrorMessage name="email" component="div" />
         </div>
       </Form>
