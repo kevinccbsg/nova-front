@@ -1,0 +1,35 @@
+@use 'sass:math';
+@import '../../styles/variables';
+
+.container {
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    border: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    width: 100%;
+    background: $Border;
+  }
+  thead {
+    box-shadow: inset 0 -1px rgb(0 0 0 / 25%), inset 0 1px rgb(0 0 0 / 25%);
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0,0,0,0.45);
+    text-shadow: 0 0 1px rgb(0 0 0 / 10%);
+    font-size: 1.5em;
+    text-align: left;
+    background-color: $Background;
+    color: $PText;
+  }
+  th, td {
+    padding: 10px 5px;
+  }
+  td {
+    color: $Background;
+    text-shadow: 0 0 1px rgb(255 255 255 / 10%);
+    font-size: 1em;
+  }
+}
