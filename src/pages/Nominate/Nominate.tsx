@@ -36,8 +36,8 @@ const Nominate = () => (
           }
         }}
       >
-        {({ isSubmitting }) => (
-          <Form isSubmitting={isSubmitting} />
+        {({ isSubmitting, values }) => (
+          <Form values={values} isSubmitting={isSubmitting} />
         )}
       </Formik>
     </section>

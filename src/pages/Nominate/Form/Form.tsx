@@ -5,7 +5,7 @@ import Button from '../../../components/Button';
 import { FormProps } from './Form.model';
 import style from './Form.module.scss';
 
-const NominateForm = ({ isSubmitting }: FormProps) => (
+const NominateForm = ({ values, isSubmitting }: FormProps) => (
   <Form>
     <div className={style.inputContainer}>
       <label htmlFor="email">email</label>
@@ -34,7 +34,7 @@ const NominateForm = ({ isSubmitting }: FormProps) => (
       />
     </div>
     <div className={style.inputContainer}>
-      <label htmlFor="involvement">involvement</label>
+      <label htmlFor="involvement">involvement: {values.involvement}</label>
       <Field
         data-cy="input-involvement"
         type="range"
@@ -49,7 +49,7 @@ const NominateForm = ({ isSubmitting }: FormProps) => (
       />
     </div>
     <div className={style.inputContainer}>
-      <label htmlFor="talent">talent</label>
+      <label htmlFor="talent">talent: {values.talent}</label>
       <Field
         data-cy="input-talent"
         type="range"
