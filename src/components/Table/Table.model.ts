@@ -17,6 +17,7 @@ export interface Data {
 export interface TableProps {
   columns: Column[]
   data: Data[]
+  dataCy: string
   texts: {
     collapsed: string
     expanded: string

@@ -8,7 +8,7 @@ const memberID = '3cd94258-73ce-4f86-83f8-9ff016df4a85';
 const API_URL = import.meta.env.API_URL || '';
 
 const nominations = async (): Promise<NominationResponse> => {
-  const { data } = await axios.get<NominationResponse>(`${API_URL}/nominations`);
+  const { data } = await axios.get<NominationResponse>(`${API_URL}/api/v1/nominations`);
   return data;
 };
 
