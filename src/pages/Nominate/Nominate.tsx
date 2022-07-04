@@ -5,6 +5,7 @@ import Main from '../../layouts/Main';
 import Button from '../../components/Button';
 import { nominateValidation } from '../../validators';
 import style from './Nominate.module.scss';
+import * as api from '../../repository/api';
 
 const INIT_VALUES = {
   email: '',
@@ -20,7 +21,17 @@ const Nominate = () => (
       <Formik
         initialValues={INIT_VALUES}
         validationSchema={nominateValidation()}
-        onSubmit={() => console.log('submit')}
+        onSubmit={async (values, { setSubmitting }) => {
+          try {
+            await api.nominate({
+              email: values.email,
+              description: values.description,
+              score: { involvement: values.involvement, talent: values.talent },
+            });
+          } finally {
+            setSubmitting(false)
+          }
+        }}
       >
         {({ isSubmitting }) => (
           <Form>
