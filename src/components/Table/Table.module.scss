@@ -32,4 +32,10 @@
     text-shadow: 0 0 1px rgb(255 255 255 / 10%);
     font-size: 1em;
   }
+  .expandRowIcon {
+    border: 1px solid $Border;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
 }

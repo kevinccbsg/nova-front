@@ -24,8 +24,8 @@ const Nominations = () => {
           columns={columns}
           data={data}
           texts={{
-            collapsed: 'collapsed',
-            expanded: 'expanded',
+            collapsed: 'collapse',
+            expanded: 'expand',
           }}
         />
       </section>

@@ -29,7 +29,7 @@ const Nominate = () => (
               score: { involvement: values.involvement, talent: values.talent },
             });
           } finally {
-            setSubmitting(false)
+            setSubmitting(false);
           }
         }}
       >
