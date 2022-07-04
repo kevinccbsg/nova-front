@@ -58,7 +58,7 @@ npm run test:dev
 In case you don't know how to use cypress you can execute in your local machine with these commands, and env variables.
 
 ```
-npm run dev
+npm run dev:local
 ```
 
 .env

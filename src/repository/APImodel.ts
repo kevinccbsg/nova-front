@@ -8,7 +8,7 @@ interface Nomination {
   email: string
   description: string
   referrer: string
-  dateReferrer: string
+  dateReferred: string
   status: 'REJECTED' | 'ACCEPTED'
   score: Score
 }

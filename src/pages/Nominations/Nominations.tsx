@@ -21,7 +21,7 @@ const Nominations = () => {
           email: nomination.email,
           status: nomination.status,
           description: nomination.description,
-          date: nomination.dateReferrer,
+          date: nomination.dateReferred,
           involvement: nomination.score.involvement,
           talent: nomination.score.talent,
         }));
@@ -37,7 +37,7 @@ const Nominations = () => {
   return (
     <Main>
       <section className={style.container}>
-        <h1 className={style.header}>Nominations</h1>
+        <h1 className={style.header}>{t('nominations.title', 'Nominations')}</h1>
         <Link to={ROUTES.NOMINATE}>
           <Button data-cy="new-nomination-button" type="submit" theme="primary">
             {t('nominations.button', 'nominate')}

@@ -5,6 +5,7 @@ const columns = (t: TFunction<'translation', undefined>) => [
     title: t('nominations.table.email', 'email'),
     dataIndex: 'email',
     key: 'email',
+    width: 200,
   },
   {
     title: t('nominations.table.status', 'status'),
@@ -20,6 +21,7 @@ const columns = (t: TFunction<'translation', undefined>) => [
     title: t('nominations.table.involvement', 'involvement'),
     dataIndex: 'involvement',
     key: 'involvement',
+    width: 150,
   },
   {
     title: t('nominations.table.talent', 'talent'),
