@@ -2,7 +2,9 @@ import Table from 'rc-table';
 import style from './Table.module.scss';
 import { TableProps } from './Table.model';
 
-const TableComponent = ({ columns, data, dataCy, texts }: TableProps) => (
+const TableComponent = ({
+  columns, data, dataCy, texts,
+}: TableProps) => (
     <div className={style.container}>
       <Table
         sticky

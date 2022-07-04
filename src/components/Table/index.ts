@@ -3,5 +3,4 @@ import { Data } from './Table.model';
 
 export default Table;
 
-export type { Data }
-
+export type { Data };

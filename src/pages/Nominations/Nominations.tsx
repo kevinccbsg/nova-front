@@ -12,7 +12,7 @@ const Nominations = () => {
   const [list, setList] = useState<Data[]>([]);
   useEffect(() => {
     api.nominations()
-      .then(nominationList => {
+      .then((nominationList) => {
         const formatData = nominationList.data.map(nomination => ({
           key: nomination.id,
           email: nomination.email,
@@ -22,9 +22,9 @@ const Nominations = () => {
           involvement: nomination.score.involvement,
           talent: nomination.score.talent,
         }));
-        setList(formatData)
+        setList(formatData);
       });
-  }, [api.nominations])
+  }, []);
 
   return (
     <Main>
