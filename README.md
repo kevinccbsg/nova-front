@@ -4,7 +4,7 @@
 
 Nova Front challenge. This is a React APP, that uses TS, i18next, react-router-dom, SASS, react-tostify, and cypress. As I don't want to add a lot of complexity I did not include an state managment (Mobx, redux...).
 
-This is a preview of the app, which was designed with a mobile first approach.
+This is a preview of the app, which was designed with a mobile first approach. You could also test it [here](https://nova-challenge-front.herokuapp.com/).
 
 **Mobile**
 
