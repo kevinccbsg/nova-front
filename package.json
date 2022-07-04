@@ -5,8 +5,8 @@
   "scripts": {
     "cypress:open": "wait-on tcp:3000 && cypress open",
     "test:dev": "run-p dev cypress:open",
-    "dev": "vite",
-    "build": "tsc && BUILD=true vite build",
+    "dev": "cross-env VITE_API_URL= vite",
+    "build": "tsc && vite build",
     "lint": "eslint src",
     "json-server": "json-server fake-server/db.json --routes fake-server/routes.json",
     "preview": "vite preview",
