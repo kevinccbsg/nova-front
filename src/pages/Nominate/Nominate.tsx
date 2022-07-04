@@ -1,4 +1,5 @@
 import { Formik } from 'formik';
+import { toast } from 'react-toastify';
 import Main from '../../layouts/Main';
 import { nominateValidation } from '../../validators';
 import Form from './Form';
@@ -25,6 +26,10 @@ const Nominate = () => (
               email: values.email,
               description: values.description,
               score: { involvement: values.involvement, talent: values.talent },
+            });
+          } catch (error) {
+            toast('Error saving nominations', {
+              type: 'error',
             });
           } finally {
             setSubmitting(false);

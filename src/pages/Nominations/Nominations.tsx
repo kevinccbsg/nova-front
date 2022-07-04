@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import Main from '../../layouts/Main';
 import columns from './columns';
 import { ROUTES } from '../../constants';
@@ -23,6 +24,11 @@ const Nominations = () => {
           talent: nomination.score.talent,
         }));
         setList(formatData);
+      })
+      .catch(() => {
+        toast('Error retrieving nominations', {
+          type: 'error',
+        });
       });
   }, []);
 
