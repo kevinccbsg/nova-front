@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
@@ -21,7 +22,7 @@ const Nominations = () => {
           email: nomination.email,
           status: nomination.status,
           description: nomination.description,
-          date: nomination.dateReferred,
+          date: dayjs(nomination.dateReferred).format('MM-DD-YYYY'),
           involvement: nomination.score.involvement,
           talent: nomination.score.talent,
         }));
