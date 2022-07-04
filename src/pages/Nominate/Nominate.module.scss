@@ -23,9 +23,13 @@
       padding: 10px 5px;
       border: 1px solid $Border;
       box-shadow: none;
+      margin-bottom: 5px;
     }
     textarea {
       font-size: emCalc(20px);
+    }
+    .error {
+      color: $Error;
     }
   }
 }

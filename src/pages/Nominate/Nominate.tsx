@@ -27,22 +27,22 @@ const Nominate = () => (
             <div className={style.inputContainer}>
               <label htmlFor="email">email</label>
               <Field type="email" name="email" id="email" />
-              <ErrorMessage name="email" component="div" />
+              <ErrorMessage className={style.error} name="email" component="div" />
             </div>
             <div className={style.inputContainer}>
               <label htmlFor="description">description</label>
               <Field as="textarea" name="description" id="description" cols={30} rows={10} />
-              <ErrorMessage name="description" component="div" />
+              <ErrorMessage className={style.error} name="description" component="div" />
             </div>
             <div className={style.inputContainer}>
               <label htmlFor="involvement">involvement</label>
               <Field type="range" name="involvement" id="involvement" step={1} min={0} max={10} />
-              <ErrorMessage name="involvement" component="div" />
+              <ErrorMessage className={style.error} name="involvement" component="div" />
             </div>
             <div className={style.inputContainer}>
               <label htmlFor="talent">talent</label>
               <Field type="range" name="talent" id="talent" step={1} min={0} max={10} />
-              <ErrorMessage name="talent" component="div" />
+              <ErrorMessage className={style.error} name="talent" component="div" />
             </div>
             <div>
               <Button type="submit" theme="primary" disabled={isSubmitting}>
