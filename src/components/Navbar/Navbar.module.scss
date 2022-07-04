@@ -1,0 +1,17 @@
+@use 'sass:math';
+@import '../../styles/variables';
+
+.navbar {
+  background-color: $Background;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: emCalc(20px) emCalc(20px);
+  .imgContainer {
+    width: 30%;
+    max-width: emCalc(120px);
+    img {
+      width: 100%;
+    }
+  }
+}
