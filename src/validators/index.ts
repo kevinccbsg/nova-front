@@ -1,18 +1,30 @@
 import * as Yup from 'yup';
 
-const nominateValidation = () => (
+interface ErrorMessages {
+  required: string
+  min: string
+  max: string
+  email: string
+}
+
+const nominateValidation = ({
+  required,
+  min,
+  max,
+  email,
+}: ErrorMessages) => (
   Yup.object({
-    email: Yup.string().email('Invalid email address').required('Required'),
+    email: Yup.string().email(email).required(required),
     description: Yup.string()
-      .required('Required'),
+      .required(required),
     involvement: Yup.number()
-      .min(0, 'Must be 10')
-      .max(10, 'Must be 10')
-      .required('Required'),
+      .min(0, min)
+      .max(10, max)
+      .required(required),
     talent: Yup.number()
-      .min(0, 'Must be 10')
-      .max(10, 'Must be 10')
-      .required('Required'),
+      .min(0, min)
+      .max(10, max)
+      .required(required),
   })
 );
 

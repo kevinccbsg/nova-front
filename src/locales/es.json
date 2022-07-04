@@ -1,0 +1,32 @@
+{
+  "nominate": {
+    "error": {
+      "email": "Email invalido",
+      "max": "Valor máximo 10",
+      "min": "Valor mínimo 0",
+      "required": "Requerido"
+    },
+    "errorSaving": "Error al enviar la nominación",
+    "form": {
+      "description": "Descripcción",
+      "email": "Email",
+      "involvement": "Compromiso",
+      "submit": "Nominar",
+      "talent": "Talento"
+    },
+    "title": "Nominate a candidate"
+  },
+  "nominations": {
+    "button": "Nominar",
+    "error": "Error al recibir las nominaciones",
+    "table": {
+      "collapsed": "Colapsar",
+      "date": "Fecha",
+      "email": "Email",
+      "expanded": "Expandir",
+      "involvement": "Compromiso",
+      "status": "Estatus",
+      "talent": "Talento"
+    }
+  }
+}
