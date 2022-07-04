@@ -1,4 +1,4 @@
-import {      
+import {
   Formik, Form, Field, ErrorMessage,
 } from 'formik';
 import Main from '../../layouts/Main';
@@ -43,7 +43,7 @@ const Nominate = () => (
               <Field type="range" name="talent" id="talent" step={1} min={0} max={10} />
               <ErrorMessage name="talent" component="div" />
             </div>
-            <Button type="submit" theme='primary' disabled={isSubmitting}>
+            <Button type="submit" theme="primary" disabled={isSubmitting}>
               Submit
             </Button>
           </Form>
