@@ -1,3 +1,5 @@
+[![Cypress Tests](https://github.com/kevinccbsg/nova-front/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kevinccbsg/nova-front/actions/workflows/ci.yml)
+
 # nova-front
 
 Nova Front challenge. This is a React APP, that uses TS, i18next, react-router-dom, SASS, react-tostify, and cypress. As I don't want to add a lot of complexity I did not include an state managment (Mobx, redux...).
