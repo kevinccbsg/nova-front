@@ -1,8 +1,8 @@
-import {    
+import {      
   Formik, Form, Field, ErrorMessage,
 } from 'formik';
 import Main from '../../layouts/Main';
-
+import Button from '../../components/Button';
 import { nominateValidation } from '../../validators';
 
 const INIT_VALUES = {
@@ -15,6 +15,7 @@ const INIT_VALUES = {
 const Nominate = () => (
   <Main>
     <section>
+      <h1>Nominate a candidate</h1>
       <Formik
         initialValues={INIT_VALUES}
         validationSchema={nominateValidation()}
@@ -42,9 +43,9 @@ const Nominate = () => (
               <Field type="range" name="talent" id="talent" step={1} min={0} max={10} />
               <ErrorMessage name="talent" component="div" />
             </div>
-            <button type="submit" disabled={isSubmitting}>
+            <Button type="submit" theme='primary' disabled={isSubmitting}>
               Submit
-            </button>
+            </Button>
           </Form>
         )}
       </Formik>
