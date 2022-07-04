@@ -8,6 +8,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    ...(process.env.BUILD ? [EnvironmentPlugin(['VITE_API_URL'])] : []),
     EnvironmentPlugin(['VITE_API_URL']),
     i18nResources({
       path: resolve(__dirname, 'src/locales'),
