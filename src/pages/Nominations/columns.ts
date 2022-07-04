@@ -1,6 +1,6 @@
 import { TFunction } from 'react-i18next';
 
-const columns = (t: TFunction<"translation", undefined>) => [
+const columns = (t: TFunction<'translation', undefined>) => [
   {
     title: t('nominations.table.email', 'email'),
     dataIndex: 'email',

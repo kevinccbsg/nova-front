@@ -32,7 +32,7 @@ const Nominations = () => {
           type: 'error',
         });
       });
-  }, []);
+  }, [t]);
 
   return (
     <Main>
@@ -49,7 +49,7 @@ const Nominations = () => {
           data={list}
           texts={{
             collapsed: t('nominations.table.collapsed', 'collapse'),
-            expanded:  t('nominations.table.expanded', 'expand'),
+            expanded: t('nominations.table.expanded', 'expand'),
           }}
         />
       </section>
