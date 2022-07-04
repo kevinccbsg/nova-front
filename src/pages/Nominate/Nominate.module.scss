@@ -1,0 +1,31 @@
+@use 'sass:math';
+@import '../../styles/variables';
+
+.container {
+  width: 90%;
+  max-width: 668px;
+  margin: 20px auto 0 auto;
+  .header {
+    font-size: emCalc(32px);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    label {
+      margin-bottom: 10px;
+      font-size: emCalc(20px);
+    }
+    input, textarea {
+      border-radius: 5px;
+      padding: 10px 5px;
+      border: 1px solid $Border;
+      box-shadow: none;
+    }
+    textarea {
+      font-size: emCalc(20px);
+    }
+  }
+}
