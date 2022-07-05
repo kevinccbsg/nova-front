@@ -43,12 +43,6 @@ src
 ├───validatorss
 ```
 
-If you want to run in local you can execute:
-
-```
-npm run dev
-```
-
 We really recommend to run both cypress and the app while you are developing because you can handle API requests while you are working in the project. You can use this command to do this:
 
 ```
