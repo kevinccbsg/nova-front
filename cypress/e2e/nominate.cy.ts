@@ -34,5 +34,6 @@ describe('Nominate page', () => {
         const { body } = request;
         expect(body).to.eql(expectedValues);
       });
+    cy.url().should('not.include', '/nominate');
   });
 });

@@ -1,7 +1,9 @@
 import { Formik } from 'formik';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
 import Main from '../../layouts/Main';
+import { ROUTES } from '../../constants';
 import { nominateValidation } from '../../validators';
 import Form from './Form';
 import style from './Nominate.module.scss';
@@ -16,6 +18,7 @@ const INIT_VALUES = {
 
 const Nominate = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   return (
     <Main>
       <section className={style.container}>
@@ -29,19 +32,20 @@ const Nominate = () => {
             email: t('nominate.error.email', 'Invalid email'),
           })}
           onSubmit={async (values, { setSubmitting }) => {
-            try {
-              await api.nominate({
-                email: values.email,
-                description: values.description,
-                score: { involvement: values.involvement, talent: values.talent },
+            api.nominate({
+              email: values.email,
+              description: values.description,
+              score: { involvement: values.involvement, talent: values.talent },
+            })
+              .then(() => navigate(ROUTES.NOMINATIONS))
+              .catch(() => (
+                toast(t('nominate.errorSaving', 'Error saving your nomination'), {
+                  type: 'error',
+                })
+              ))
+              .finally(() => {
+                setSubmitting(false);
               });
-            } catch (error) {
-              toast(t('nominate.errorSaving', 'Error saving your nomination'), {
-                type: 'error',
-              });
-            } finally {
-              setSubmitting(false);
-            }
           }}
         >
           {({ isSubmitting, values }) => (
