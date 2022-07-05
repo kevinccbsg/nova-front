@@ -1,42 +1,18 @@
 import { Link } from 'react-router-dom';
-import dayjs from 'dayjs';
-import { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
 import Main from '../../layouts/Main';
 import columns from './columns';
 import { ROUTES } from '../../constants';
-import Table, { Data } from '../../components/Table';
-import * as api from '../../repository/api';
+import Table from '../../components/Table';
+import useNomination from '../../hooks/nominations';
 import Button from '../../components/Button';
 import style from './Nominations.module.scss';
 
 const Nominations = () => {
   const { t } = useTranslation();
-  const [list, setList] = useState<Data[]>([]);
-  useEffect(() => {
-    api.nominations()
-      .then((nominationList) => {
-        const formatData = nominationList.data.map(nomination => ({
-          key: nomination.id,
-          email: nomination.email,
-          status: nomination.status,
-          description: nomination.description,
-          date: dayjs(nomination.dateReferred).format('MM-DD-YYYY'),
-          involvement: nomination.score.involvement,
-          talent: nomination.score.talent,
-        }));
-        setList(formatData);
-      })
-      .catch(() => {
-        toast(t('nominations.error', 'Error retrieving nominations'), {
-          type: 'error',
-        });
-      });
-  }, [t]);
-
+  const { data: list, isLoading } = useNomination();
   return (
-    <Main>
+    <Main loading={isLoading}>
       <section className={style.container}>
         <h1 className={style.header}>{t('nominations.title', 'Nominations')}</h1>
         <Link to={ROUTES.NOMINATE}>
